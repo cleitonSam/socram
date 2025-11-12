@@ -21,7 +21,7 @@ const Header: React.FC = () => {
           <img
             src="https://raw.githubusercontent.com/cleitonSam/socram/refs/heads/main/Logo%20SOCRAM%20(cor%20azul%20e%20amarelo)%20.png"
             alt="SOCRAM - Locação de Guindauto"
-            className="h-12 sm:h-14 w-auto"
+            className="h-10 sm:h-12 w-auto"
           />
         </div>
 

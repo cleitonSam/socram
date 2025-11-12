@@ -38,21 +38,7 @@ const HeroSection: React.FC = () => {
         <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-8 font-light opacity-90">
           Precisão, Segurança e Agilidade para Seus Projetos
         </p>
-        <a
-          href="https://wa.me/5511947871831?text=Olá! Gostaria de solicitar um orçamento para locação de guindauto."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button
-            className={cn(
-              "bg-[#25D366] hover:bg-[#128C7E] text-white",
-              "px-8 py-6 text-lg font-semibold rounded-full shadow-xl transition-all duration-300",
-              "flex items-center gap-2",
-            )}
-          >
-            <Truck size={20} /> Solicite pelo WhatsApp
-          </Button>
-        </a>
+        {/* O botão de WhatsApp foi removido daqui */}
 
         <div className="flex justify-center flex-wrap gap-4 sm:gap-8 mt-12">
           <GraphicItem icon={<Truck />} text="Guindauto 5T" />
