@@ -17,13 +17,16 @@ const Header: React.FC = () => {
     sectionIds: navItems.map(item => item.href.substring(1)), // Remove '#' from href
   });
 
+  // URL do logo fornecida pelo usuário
+  const logoUrl = "https://raw.githubusercontent.com/cleitonSam/socram/refs/heads/main/Logo%20SOCRAM%20(cor%20azul%20e%20amarelo)%20.png";
+
   return (
     <header className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
-        {/* Logo - Apenas a imagem */}
+        {/* Logo - Usando URL externa */}
         <div className="flex items-center">
           <img
-            src="/logo.png"
+            src={logoUrl}
             alt="SOCRAM - Locação de Guindauto"
             className="h-10 sm:h-12 w-auto"
           />
