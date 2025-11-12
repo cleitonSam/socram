@@ -12,6 +12,7 @@ const servicesData = [
       "Içamento e posicionamento preciso de cargas de até 5 toneladas em diversos ambientes, com segurança e eficiência.",
     imageUrl:
       "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    imageAlt: "Guindauto movimentando carga pesada em ambiente industrial",
     whatsappText: "Olá! Gostaria de solicitar um orçamento para Movimentação de Cargas.",
   },
   {
@@ -20,6 +21,7 @@ const servicesData = [
       "Suporte completo para obras, içamento de materiais pesados e movimentação de equipamentos em canteiros de obras.",
     imageUrl:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    imageAlt: "Guindauto em canteiro de obras auxiliando na construção",
     whatsappText: "Olá! Gostaria de solicitar um orçamento para Obras Civis.",
   },
   {
@@ -28,6 +30,7 @@ const servicesData = [
       "Soluções eficientes para manutenção urbana, instalação de postes, placas de sinalização e poda de árvores.",
     imageUrl:
       "https://images.unsplash.com/photo-1508873696983-2dfd5898fcc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    imageAlt: "Guindauto realizando manutenção em infraestrutura urbana",
     whatsappText: "Olá! Gostaria de solicitar um orçamento para Serviços Urbanos.",
   },
 ];
@@ -49,6 +52,8 @@ const ServicesSection: React.FC = () => {
               <div
                 className="h-48 bg-cover bg-center"
                 style={{ backgroundImage: `url('${service.imageUrl}')` }}
+                role="img"
+                aria-label={service.imageAlt}
               ></div>
               <CardContent className="p-6">
                 <CardTitle className="text-xl font-semibold text-primary mb-3">
