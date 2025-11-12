@@ -79,7 +79,7 @@ const SpecsSection: React.FC = () => {
           >
             <Button
               className={cn(
-                "bg-[#25D366] hover:bg-[#128C7E] text-white",
+                "bg-secondary hover:bg-secondary/90 text-primary",
                 "px-8 py-6 text-lg font-semibold rounded-full shadow-lg transition-all duration-300",
                 "flex items-center gap-2 mx-auto",
               )}

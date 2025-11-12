@@ -18,9 +18,9 @@ const WhatsappFloat: React.FC = () => {
       onClick={handleClick}
       className={cn(
         "fixed bottom-8 right-8 w-14 h-14 rounded-full",
-        "bg-[#25D366] text-white shadow-lg",
+        "bg-secondary text-primary shadow-lg",
         "flex items-center justify-center text-3xl",
-        "transition-all duration-400 hover:bg-[#128C7E] hover:scale-105 z-50",
+        "transition-all duration-400 hover:bg-secondary/90 hover:scale-105 z-50",
       )}
       aria-label="Fale conosco pelo WhatsApp"
     >
