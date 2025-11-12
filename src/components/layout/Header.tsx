@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   });
 
   // URL do logo fornecida pelo usuário
-  const logoUrl = "https://raw.githubusercontent.com/cleitonSam/socram/refs/heads/main/Logo%20SOCRAM%20(cor%20azul%20e%20amarelo)%20.png";
+  const logoUrl = "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/Logo%20SOCRAM%20(cor%20azul%20e%20amarelo)%20.png";
 
   return (
     <header className="bg-white shadow-md fixed w-full top-0 z-50">
