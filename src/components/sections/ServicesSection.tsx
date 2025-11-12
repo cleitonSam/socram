@@ -1,0 +1,84 @@
+import React from "react";
+import SectionTitle from "@/components/SectionTitle";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Truck } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const servicesData = [
+  {
+    title: "Movimentação de Cargas",
+    description:
+      "Içamento e posicionamento preciso de cargas de até 5 toneladas em diversos ambientes, com segurança e eficiência.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    whatsappText: "Olá! Gostaria de solicitar um orçamento para Movimentação de Cargas.",
+  },
+  {
+    title: "Obras Civis",
+    description:
+      "Suporte completo para obras, içamento de materiais pesados e movimentação de equipamentos em canteiros de obras.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    whatsappText: "Olá! Gostaria de solicitar um orçamento para Obras Civis.",
+  },
+  {
+    title: "Serviços Urbanos",
+    description:
+      "Soluções eficientes para manutenção urbana, instalação de postes, placas de sinalização e poda de árvores.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1508873696983-2dfd5898fcc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    whatsappText: "Olá! Gostaria de solicitar um orçamento para Serviços Urbanos.",
+  },
+];
+
+const ServicesSection: React.FC = () => {
+  return (
+    <section id="servicos" className="py-16 md:py-24 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionTitle
+          title="Nossos Serviços"
+          subtitle="A versatilidade do guindauto 5 toneladas para diversas aplicações"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {servicesData.map((service, index) => (
+            <Card
+              key={index}
+              className="overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-xl hover:translate-y-[-5px]"
+            >
+              <div
+                className="h-48 bg-cover bg-center"
+                style={{ backgroundImage: `url('${service.imageUrl}')` }}
+              ></div>
+              <CardContent className="p-6">
+                <CardTitle className="text-xl font-semibold text-primary mb-3">
+                  {service.title}
+                </CardTitle>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+              </CardContent>
+              <CardFooter className="p-6 pt-0">
+                <a
+                  href={`https://wa.me/5511947871831?text=${encodeURIComponent(service.whatsappText)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button
+                    className={cn(
+                      "w-full bg-[#25D366] hover:bg-[#128C7E] text-white",
+                      "flex items-center gap-2",
+                    )}
+                  >
+                    <Truck size={18} /> Solicitar Orçamento
+                  </Button>
+                </a>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;

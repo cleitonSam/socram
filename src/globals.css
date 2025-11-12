@@ -13,11 +13,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* SOCRAM Colors */
+    --primary: 214 60% 15%; /* #0F283F */
+    --primary-foreground: 210 40% 98%; /* White/Light */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 42 95% 57%; /* #F9C02A */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark */
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -61,8 +62,12 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* SOCRAM Dark Mode Colors (Adjusted for contrast) */
+    --primary: 214 60% 15%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 42 95% 57%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
