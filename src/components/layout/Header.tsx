@@ -23,7 +23,7 @@ const Header: React.FC = () => {
         {/* Logo - Apenas a imagem */}
         <div className="flex items-center">
           <img
-            src="https://raw.githubusercontent.com/cleitonSam/socram/refs/heads/main/Logo%20SOCRAM%20(cor%20azul%20e%20amarelo)%20.png"
+            src="/logo.png"
             alt="SOCRAM - Locação de Guindauto"
             className="h-10 sm:h-12 w-auto"
           />
