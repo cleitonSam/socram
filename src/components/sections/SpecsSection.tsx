@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/gtagHelper";
 
 const specsData = [
   { characteristic: "Capacidade Máxima", detail: "5 toneladas" },
@@ -24,6 +25,10 @@ const specsData = [
 ];
 
 const SpecsSection: React.FC = () => {
+  const handleWhatsappClick = () => {
+    trackEvent('click', 'whatsapp_locacao', 'Botão de Locação - Especificações');
+  };
+
   return (
     <section id="guindauto" className="py-16 md:py-24 bg-blue-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,6 +75,7 @@ const SpecsSection: React.FC = () => {
             href="https://wa.me/5511947871831?text=Olá! Gostaria de solicitar a locação do Guindauto 5T."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleWhatsappClick}
           >
             <Button
               className={cn(

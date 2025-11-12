@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Button } from "@/components/ui/button";
 import { Truck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/gtagHelper";
 
 const servicesData = [
   {
@@ -36,6 +37,10 @@ const servicesData = [
 ];
 
 const ServicesSection: React.FC = () => {
+  const handleWhatsappClick = (serviceTitle: string) => {
+    trackEvent('click', 'whatsapp_orcamento', `Serviço: ${serviceTitle}`);
+  };
+
   return (
     <section id="servicos" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,6 +72,7 @@ const ServicesSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full"
+                  onClick={() => handleWhatsappClick(service.title)}
                 >
                   <Button
                     className={cn(

@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { showSuccess, showError } from "@/utils/toast";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/gtagHelper";
 
 // Definição do Schema de Validação
 const formSchema = z.object({
@@ -54,9 +55,6 @@ const ContactSection: React.FC = () => {
   });
 
   const onSubmit = async (values: ContactFormValues) => {
-    // Simulação de envio para a API externa (SteinHQ)
-    // Nota: Em um ambiente de produção real, esta chamada de API deve ser feita
-    // por um backend para evitar expor chaves ou URLs sensíveis.
     const API_URL = 'https://api.steinhq.com/v1/storages/68a52414c088333365cfb6bd/clientes';
     
     const formData = {
@@ -80,8 +78,8 @@ const ContactSection: React.FC = () => {
         if (response.ok) {
             showSuccess(`Mensagem enviada! Obrigado, ${values.nome}. Retornaremos em breve.`);
             form.reset();
+            trackEvent('submit_form', 'contact', 'Formulário de Contato Enviado');
         } else {
-            // Tenta ler o erro da resposta, se disponível
             const errorText = await response.text();
             throw new Error(`Erro ao enviar: ${response.status} - ${errorText}`);
         }
@@ -91,7 +89,6 @@ const ContactSection: React.FC = () => {
     }
   };
 
-  // Função para aplicar máscara de telefone (simples)
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value.replace(/\D/g, "");
     if (value.length > 11) value = value.substring(0, 11);

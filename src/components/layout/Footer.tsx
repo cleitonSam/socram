@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { trackEvent } from "@/lib/gtagHelper";
 
 const Footer: React.FC = () => {
   const footerLinks = [
@@ -30,6 +31,10 @@ const Footer: React.FC = () => {
       ],
     },
   ];
+
+  const handleWhatsappClick = () => {
+    trackEvent('click', 'whatsapp', 'Link do Rodapé');
+  };
 
   return (
     <footer className="bg-primary text-white pt-16 pb-8">
@@ -89,7 +94,15 @@ const Footer: React.FC = () => {
               <p className="text-sm text-gray-300">
                 (11) 2935-1800 (Fixo)
                 <br />
-                (11) 94787-1831 (WhatsApp)
+                <a
+                  href="https://wa.me/5511947871831"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleWhatsappClick}
+                  className="hover:text-secondary"
+                >
+                  (11) 94787-1831 (WhatsApp)
+                </a>
               </p>
             </div>
             <div className="flex flex-col items-center">
