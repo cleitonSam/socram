@@ -70,8 +70,8 @@ const ServicesSection: React.FC = () => {
                 >
                   <Button
                     className={cn(
-                      "w-full bg-[#25D366] hover:bg-[#128C7E] text-white",
-                      "flex items-center gap-2",
+                      "w-full bg-secondary hover:bg-secondary/90 text-primary font-bold",
+                      "flex items-center gap-2 transition-all duration-300",
                     )}
                   >
                     <Truck size={18} /> Solicitar Orçamento
