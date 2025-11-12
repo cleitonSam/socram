@@ -28,7 +28,7 @@ const SpecsSection: React.FC = () => {
     <section id="guindauto" className="py-16 md:py-24 bg-blue-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Nosso Guindauto 5 Toneladas"
+          title="Especificações do Guindauto 5T"
           subtitle="Potência, precisão e confiabilidade para suas operações"
         />
 

@@ -23,10 +23,10 @@ const HeroSection: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight max-w-4xl">
-          Içamento e Movimentação de Cargas com Precisão e Segurança
+          Soluções Completas em Içamento e Movimentação de Cargas
         </h1>
         <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-10 font-light opacity-90">
-          Locação de Guindauto 5 Toneladas em São Paulo e Grande SP. A solução ideal para sua obra ou projeto.
+          Locação de Guindauto 5T com operador incluso em São Paulo e Grande SP. A solução ágil e segura para sua obra ou projeto.
         </p>
         
         <a href="#contato">

@@ -6,6 +6,7 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import SpecsSection from "@/components/sections/SpecsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import WhatsappFloat from "@/components/WhatsappFloat";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
         <HeroSection />
         <FeaturesSection />
         <ServicesSection />
+        <TestimonialsSection />
         <SpecsSection />
         <ContactSection />
       </main>

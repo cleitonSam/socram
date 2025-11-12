@@ -37,10 +37,10 @@ const servicesData = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section id="servicos" className="py-16 md:py-24 bg-gray-50">
+    <section id="servicos" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Nossos Serviços"
+          title="Nossos Serviços de Içamento"
           subtitle="A versatilidade do guindauto 5 toneladas para diversas aplicações"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
