@@ -16,19 +16,13 @@ const GraphicItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
 );
 
 const HeroSection: React.FC = () => {
-  const heroBackgroundImage = "https://images.unsplash.com/photo-1529939803454-24c814598593?q=80&w=1920&auto=format&fit=crop";
-
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center text-center text-white min-h-[80vh] md:min-h-[90vh] bg-cover bg-center"
-      style={{ backgroundImage: `url('${heroBackgroundImage}')` }}
+      className="flex items-center justify-center text-center text-white min-h-[70vh] bg-primary pt-24 pb-12"
     >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-primary/70 z-0"></div>
-
-      <div className="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-shadow-lg max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight max-w-4xl">
           Içamento e Movimentação de Cargas com Precisão e Segurança
         </h1>
         <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-10 font-light opacity-90">
