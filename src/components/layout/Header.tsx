@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -12,6 +13,9 @@ const navItems = [
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const activeSection = useActiveSection({
+    sectionIds: navItems.map(item => item.href.substring(1)), // Remove '#' from href
+  });
 
   return (
     <header className="bg-white shadow-md fixed w-full top-0 z-50">
@@ -32,7 +36,10 @@ const Header: React.FC = () => {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="text-gray-700 font-medium hover:text-primary transition-colors text-lg"
+                  className={cn(
+                    "text-gray-700 font-medium hover:text-primary transition-colors text-lg",
+                    activeSection === item.href.substring(1) && "text-primary border-b-2 border-primary"
+                  )}
                 >
                   {item.name}
                 </a>
@@ -66,7 +73,10 @@ const Header: React.FC = () => {
                 <a
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-lg text-gray-700 font-medium hover:text-primary transition-colors py-2 border-b border-gray-100"
+                  className={cn(
+                    "block text-lg text-gray-700 font-medium hover:text-primary transition-colors py-2 border-b border-gray-100",
+                    activeSection === item.href.substring(1) && "text-primary border-l-4 border-primary pl-2"
+                  )}
                 >
                   {item.name}
                 </a>
