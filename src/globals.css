@@ -96,6 +96,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth; /* Adiciona o deslizamento suave */
+  }
+  
   * {
     @apply border-border;
   }
