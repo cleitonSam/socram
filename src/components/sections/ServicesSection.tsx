@@ -30,7 +30,7 @@ const servicesData = [
     description:
       "Soluções eficientes para manutenção urbana, instalação de postes, placas de sinalização e poda de árvores.",
     imageUrl:
-      "https://images.unsplash.com/photo-1532693440-2463338760f0?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Nova imagem para Serviços Urbanos
+      "https://images.unsplash.com/photo-1508873696983-2dfd5898fcc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     imageAlt: "Guindauto realizando manutenção em infraestrutura urbana",
     whatsappText: "Olá! Gostaria de solicitar um orçamento para Serviços Urbanos.",
   },
