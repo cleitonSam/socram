@@ -84,18 +84,18 @@ const SpecsSection: React.FC = () => {
         />
 
         <Tabs defaultValue="5t" className="max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-8 bg-white p-1 rounded-lg shadow-md">
+          <TabsList className="flex justify-center w-full max-w-md mx-auto bg-gray-100 p-1 rounded-xl shadow-inner mb-8">
             <TabsTrigger 
                 value="5t" 
                 onClick={() => setActiveCrane('5t')}
-                className="data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg text-lg py-2 transition-all"
+                className="flex-1 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md text-base py-2 rounded-lg transition-all duration-200 hover:bg-gray-200"
             >
                 Guindauto 5 Toneladas
             </TabsTrigger>
             <TabsTrigger 
                 value="10t" 
                 onClick={() => setActiveCrane('10t')}
-                className="data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-lg text-lg py-2 transition-all"
+                className="flex-1 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md text-base py-2 rounded-lg transition-all duration-200 hover:bg-gray-200"
             >
                 Guindauto 10 Toneladas
             </TabsTrigger>
@@ -105,14 +105,14 @@ const SpecsSection: React.FC = () => {
             const spec = craneSpecs[key];
             return (
                 <TabsContent key={key} value={key} className="mt-0">
-                    <div className="bg-white shadow-xl rounded-lg overflow-hidden">
+                    <div className="bg-white shadow-xl rounded-xl overflow-hidden">
                         <Table className="w-full">
                             <TableHeader className="bg-primary">
                                 <TableRow className="border-primary/50 hover:bg-primary">
-                                    <TableHead className="text-white text-lg font-semibold">
+                                    <TableHead className="text-white text-lg font-semibold py-3 px-4">
                                         Característica
                                     </TableHead>
-                                    <TableHead className="text-white text-lg font-semibold">
+                                    <TableHead className="text-white text-lg font-semibold py-3 px-4">
                                         Detalhe
                                     </TableHead>
                                 </TableRow>
@@ -126,10 +126,10 @@ const SpecsSection: React.FC = () => {
                                             index % 2 === 0 ? "bg-white" : "bg-gray-50",
                                         )}
                                     >
-                                        <TableCell className="font-medium text-primary w-1/3">
+                                        <TableCell className="font-medium text-primary w-1/3 py-3 px-4">
                                             {item.characteristic}
                                         </TableCell>
-                                        <TableCell className="text-gray-700">
+                                        <TableCell className="text-gray-700 py-3 px-4">
                                             {item.detail}
                                         </TableCell>
                                     </TableRow>
