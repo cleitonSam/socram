@@ -25,6 +25,9 @@ const specsData = [
 ];
 
 const SpecsSection: React.FC = () => {
+  const whatsappNumber = "5511961623798";
+  const whatsappText = "Olá! Gostaria de solicitar a locação do Guindauto 5T.";
+
   const handleWhatsappClick = () => {
     trackEvent('click', 'whatsapp_locacao', 'Botão de Locação - Especificações');
   };
@@ -72,7 +75,7 @@ const SpecsSection: React.FC = () => {
 
         <div className="text-center mt-10">
           <a
-            href="https://wa.me/5511947871831?text=Olá! Gostaria de solicitar a locação do Guindauto 5T."
+            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsappClick}

@@ -88,21 +88,21 @@ const Footer: React.FC = () => {
                 Suzano - SP, 08695-010
               </p>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center col-span-1 lg:col-span-2">
               <Phone className="text-secondary mb-2" size={24} />
-              <h4 className="font-medium">Telefones</h4>
+              <h4 className="font-medium">Telefone de Contato</h4>
               <p className="text-sm text-gray-300">
-                (11) 2935-1800 (Fixo)
-                <br />
                 <a
-                  href="https://wa.me/5511947871831"
+                  href="https://wa.me/5511961623798"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleWhatsappClick}
-                  className="hover:text-secondary"
+                  className="hover:text-secondary text-lg font-bold"
                 >
-                  (11) 94787-1831 (WhatsApp)
+                  (11) 96162-3798 (WhatsApp)
                 </a>
+                <br />
+                <span className="text-xs">(Atendimento prioritário via WhatsApp)</span>
               </p>
             </div>
             <div className="flex flex-col items-center">

@@ -37,6 +37,8 @@ const servicesData = [
 ];
 
 const ServicesSection: React.FC = () => {
+  const whatsappNumber = "5511961623798";
+
   const handleWhatsappClick = (serviceTitle: string) => {
     trackEvent('click', 'whatsapp_orcamento', `Serviço: ${serviceTitle}`);
   };
@@ -68,7 +70,7 @@ const ServicesSection: React.FC = () => {
               </CardContent>
               <CardFooter className="p-6 pt-0">
                 <a
-                  href={`https://wa.me/5511947871831?text=${encodeURIComponent(service.whatsappText)}`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(service.whatsappText)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full"

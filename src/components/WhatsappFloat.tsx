@@ -4,7 +4,7 @@ import React from "react";
 import { trackEvent } from "@/lib/gtagHelper";
 
 const WhatsappFloat: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5511947871831?text=Olá! Gostaria de mais informações sobre os serviços da SOCRAM.";
+  const whatsappUrl = "https://wa.me/5511961623798?text=Olá! Gostaria de mais informações sobre os serviços da SOCRAM.";
 
   const handleClick = () => {
     trackEvent('click', 'whatsapp', 'Botão Flutuante');
