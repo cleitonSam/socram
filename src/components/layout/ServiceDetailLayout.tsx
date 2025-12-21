@@ -116,8 +116,9 @@ const ServiceDetailLayout: React.FC<ServiceDetailLayoutProps> = ({
                     <Button
                         size="lg"
                         className={cn(
-                            "bg-secondary hover:bg-secondary/90 text-primary font-bold py-7 px-10 text-xl rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg",
-                            "flex items-center gap-3 mx-auto"
+                            "bg-secondary hover:bg-secondary/90 text-primary font-bold",
+                            "px-3 py-2 text-sm sm:px-8 sm:py-6 sm:text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg", // Ajustado para mobile
+                            "flex items-center gap-2 mx-auto whitespace-normal text-center", // Adicionado whitespace-normal e text-center
                         )}
                     >
                         <MessageCircle size={24} /> Solicitar Orçamento via WhatsApp
