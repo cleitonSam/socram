@@ -152,7 +152,7 @@ const SpecsSection: React.FC = () => {
             <Button
               className={cn(
                 "bg-secondary hover:bg-secondary/90 text-primary",
-                "px-8 py-6 text-lg font-semibold rounded-full shadow-lg transition-all duration-300",
+                "px-4 py-3 text-base sm:px-8 sm:py-6 sm:text-lg font-semibold rounded-full shadow-lg transition-all duration-300", // Ajustado para mobile
                 "flex items-center gap-2 mx-auto",
               )}
             >
