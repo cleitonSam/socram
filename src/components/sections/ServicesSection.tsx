@@ -65,7 +65,7 @@ const ServicesSection: React.FC = () => {
           {servicesData.map((service, index) => (
             <Card
               key={index}
-              className="overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-xl hover:translate-y-[-5px]"
+              className="overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-xl hover:translate-y-[-5px] flex flex-col"
             >
               <div
                 className="h-48 bg-cover bg-center"
@@ -73,7 +73,7 @@ const ServicesSection: React.FC = () => {
                 role="img"
                 aria-label={service.imageAlt}
               ></div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex-grow">
                 <CardTitle className="text-xl font-semibold text-primary mb-3 flex items-center gap-2">
                   {service.icon} {service.title}
                 </CardTitle>
