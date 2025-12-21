@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 interface SectionContent {
   title: string;
-  content: string | string[];
+  content: string | string[] | React.ReactNode; // Adicionado React.ReactNode para flexibilidade
   isList?: boolean;
 }
 
@@ -92,9 +92,16 @@ const ServiceDetailLayout: React.FC<ServiceDetailLayoutProps> = ({
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    {section.content}
-                  </p>
+                  // Se o conteúdo for uma string, envolvemos em <p>. Caso contrário, renderizamos diretamente em um div.
+                  typeof section.content === 'string' ? (
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      {section.content}
+                    </p>
+                  ) : (
+                    <div className="text-lg text-gray-700 leading-relaxed">
+                      {section.content}
+                    </div>
+                  )
                 )}
               </section>
             ))}
