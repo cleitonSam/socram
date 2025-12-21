@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const Guindauto5T: React.FC = () => {
   const pageData = {
-    pageTitle: "SOCRAM | Locação de Guindauto 5T (Caminhão Munck) em SP - Içamento de Cargas Médias",
+    pageTitle: "Locação de Guindauto 5T (Caminhão Munck) em São Paulo e Grande SP | SOCRAM - Içamento de Cargas Médias e Leves",
     pageSubtitle: "Ideal para içamento e movimentação de cargas em locais com pouco espaço. Perfeito para obras, comércios e manutenções rápidas.",
     whatsappText: "Olá! Gostaria de solicitar um orçamento para a locação do Guindauto 5 Toneladas.",
     eventLabel: "Guindauto 5T Page CTA",
-    metaDescription: "SOCRAM: Especialistas em locação de guindauto de 5 toneladas (Caminhão Munck) para içamento e movimentação de cargas médias e leves em São Paulo e Grande SP. Oferecemos agilidade, segurança e operador qualificado para sua obra ou projeto.",
+    metaDescription: "SOCRAM: Líder em locação de guindauto 5 toneladas (Caminhão Munck) em São Paulo e Grande SP. Serviços de içamento e movimentação de cargas médias e leves com agilidade, segurança e operador qualificado para sua obra, comércio ou projeto.",
     sections: [
       {
         title: "Para que Serve",
