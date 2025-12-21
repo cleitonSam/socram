@@ -152,8 +152,8 @@ const SpecsSection: React.FC = () => {
             <Button
               className={cn(
                 "bg-secondary hover:bg-secondary/90 text-primary",
-                "px-4 py-3 text-base sm:px-8 sm:py-6 sm:text-lg font-semibold rounded-full shadow-lg transition-all duration-300", // Ajustado para mobile
-                "flex items-center gap-2 mx-auto",
+                "px-3 py-2 text-sm sm:px-8 sm:py-6 sm:text-lg font-semibold rounded-full shadow-lg transition-all duration-300", // Ajustado para mobile
+                "flex items-center gap-2 mx-auto whitespace-normal text-center", // Adicionado whitespace-normal e text-center
               )}
             >
               <Truck size={20} /> Solicitar Locação do Guindauto de {currentSpec.capacity}
