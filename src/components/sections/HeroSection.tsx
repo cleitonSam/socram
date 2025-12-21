@@ -7,9 +7,9 @@ const GraphicItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
   icon,
   text,
 }) => (
-  <div className="flex flex-col items-center p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 w-full max-w-[150px] sm:w-auto transition-transform hover:scale-[1.02]">
+  <div className="flex flex-col items-center justify-center p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 w-32 h-32 sm:w-36 sm:h-36 flex-shrink-0 transition-transform hover:scale-[1.02]">
     <div className="text-2xl sm:text-3xl text-secondary mb-2">{icon}</div>
-    <div className="font-semibold text-white text-xs sm:text-base text-center">
+    <div className="font-semibold text-white text-xs sm:text-base text-center leading-tight">
       {text}
     </div>
   </div>
