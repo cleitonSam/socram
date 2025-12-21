@@ -7,7 +7,9 @@ const SecuritySealFloat: React.FC = () => {
   return (
     <div
       className={cn(
-        "fixed bottom-8 left-8 w-24 h-24", // Aumentado para melhor visibilidade
+        "fixed bottom-8 left-8 w-28 h-28", // Aumentei o tamanho para mais visibilidade
+        "bg-white rounded-full shadow-2xl", // Fundo branco, borda circular e sombra forte
+        "flex items-center justify-center p-2", // Centraliza a imagem e adiciona um respiro
         "transition-transform duration-400 hover:scale-110 z-50",
         "hidden md:block" // Oculto em telas pequenas para não poluir a interface
       )}
