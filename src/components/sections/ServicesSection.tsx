@@ -32,7 +32,7 @@ const servicesData: ServiceCardData[] = [
     description:
       "Potência máxima para içamento de cargas pesadas (até 10 toneladas), estruturas robustas e equipamentos de grande porte em obras e indústrias.",
     imageUrl:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/WhatsApp%20Image%202025-10-29%20at%2011.06.13%20(1).jpeg", // Imagem atualizada
     imageAlt: "Caminhão Munck 10T em canteiro de obras",
     routePath: "/guindauto-10t",
     icon: <Truck size={24} />,
