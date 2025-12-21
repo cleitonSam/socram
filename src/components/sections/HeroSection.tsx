@@ -16,12 +16,21 @@ const GraphicItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
 );
 
 const HeroSection: React.FC = () => {
+  const sealImageUrl = "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/selo%20atendimento%20.png";
+
   return (
     <section
       id="home"
       className="flex items-center justify-center text-center text-white min-h-[70vh] bg-primary pt-24 pb-12"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        {/* Selo de Atendimento */}
+        <img
+          src={sealImageUrl}
+          alt="Selo de Atendimento em até 1 hora"
+          className="w-40 sm:w-48 lg:w-56 h-auto mb-8 animate-pulse" // Adicionado animate-pulse para mais destaque
+        />
+
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight max-w-4xl">
           Soluções Completas em Içamento e Movimentação de Cargas
         </h1>
