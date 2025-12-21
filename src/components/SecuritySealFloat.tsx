@@ -8,8 +8,8 @@ const SecuritySealFloat: React.FC = () => {
     <div
       className={cn(
         "fixed bottom-8 left-8 w-28 h-28", // Aumentei o tamanho para mais visibilidade
-        "bg-white rounded-full shadow-2xl", // Fundo branco, borda circular e sombra forte
-        "flex items-center justify-center p-2", // Centraliza a imagem e adiciona um respiro
+        "bg-primary rounded-full shadow-2xl", // Fundo azul primário, borda circular e sombra forte
+        "flex items-center justify-center", // Centraliza a imagem (removido p-2)
         "transition-transform duration-400 hover:scale-110 z-50",
         "hidden md:block" // Oculto em telas pequenas para não poluir a interface
       )}
@@ -18,7 +18,7 @@ const SecuritySealFloat: React.FC = () => {
       <img
         src={sealUrl}
         alt="Selo de Segurança e Qualidade SOCRAM"
-        className="w-full h-full object-contain rounded-full" // Adicionado rounded-full aqui para a imagem
+        className="w-full h-full object-contain rounded-full" // Mantido object-contain e rounded-full
       />
     </div>
   );
