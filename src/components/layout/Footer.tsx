@@ -1,39 +1,64 @@
 import React from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { trackEvent } from "@/lib/gtagHelper";
+import { Link } from "react-router-dom"; // Import Link for internal navigation
 
 const Footer: React.FC = () => {
   const footerLinks = [
     {
       title: "Links Rápidos",
       items: [
-        { name: "Home", href: "#home" },
-        { name: "Serviços", href: "#servicos" },
-        { name: "Guindautos Munck", href: "#guindauto" },
-        { name: "Contato", href: "#contato" },
+        { name: "Home", href: "#home", isExternal: false },
+        { name: "Serviços", href: "#servicos", isExternal: false },
+        { name: "Guindautos Munck", href: "#guindauto", isExternal: false },
+        { name: "Contato", href: "#contato", isExternal: false },
       ],
     },
     {
       title: "Serviços",
       items: [
-        { name: "Locação 5T e 10T", href: "#servicos" },
-        { name: "Serviços para Obras", href: "#servicos" },
-        { name: "Instalações Industriais", href: "#servicos" },
-        { name: "Locação Mensal", href: "#servicos" },
+        { name: "Guindauto 5T", href: "/guindauto-5t", isExternal: false },
+        { name: "Guindauto 10T", href: "/guindauto-10t", isExternal: false },
+        { name: "Içamento de Cargas", href: "/icamento-movimentacao", isExternal: false },
+        { name: "Locação Mensal", href: "#servicos", isExternal: false },
       ],
     },
     {
       title: "Área de Atendimento",
       items: [
-        { name: "São Paulo", href: "#contato" },
-        { name: "Grande São Paulo", href: "#contato" },
-        { name: "Suzano e Região", href: "#contato" },
+        { name: "São Paulo", href: "#contato", isExternal: false },
+        { name: "Grande São Paulo", href: "#contato", isExternal: false },
+        { name: "Suzano e Região", href: "#contato", isExternal: false },
       ],
     },
   ];
 
   const handleWhatsappClick = () => {
     trackEvent('click', 'whatsapp', 'Link do Rodapé');
+  };
+
+  const renderLink = (item: { name: string; href: string; isExternal: boolean }) => {
+    if (item.href.startsWith('#')) {
+        // Anchor links for internal sections on the Index page
+        return (
+            <a
+                href={item.href}
+                className="text-gray-300 hover:text-secondary transition-colors"
+            >
+                {item.name}
+            </a>
+        );
+    } else {
+        // React Router Links for dedicated pages
+        return (
+            <Link
+                to={item.href}
+                className="text-gray-300 hover:text-secondary transition-colors"
+            >
+                {item.name}
+            </Link>
+        );
+    }
   };
 
   return (
@@ -60,12 +85,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {col.items.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-gray-300 hover:text-secondary transition-colors"
-                    >
-                      {item.name}
-                    </a>
+                    {renderLink(item)}
                   </li>
                 ))}
               </ul>

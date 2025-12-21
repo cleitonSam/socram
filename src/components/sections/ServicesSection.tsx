@@ -2,53 +2,64 @@ import React from "react";
 import SectionTitle from "@/components/SectionTitle";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Truck } from "lucide-react";
+import { Truck, Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { trackEvent } from "@/lib/gtagHelper";
+import { Link } from "react-router-dom";
 
-const servicesData = [
+interface ServiceCardData {
+    title: string;
+    description: string;
+    imageUrl: string;
+    imageAlt: string;
+    routePath: string;
+    icon: React.ReactNode;
+}
+
+const servicesData: ServiceCardData[] = [
   {
-    title: "Movimentação de Cargas",
+    title: "Locação de Guindauto 5T",
     description:
-      "Içamento e posicionamento preciso de cargas de até 10 toneladas em diversos ambientes, utilizando Guindautos Munck 5T e 10T, com segurança e eficiência.",
+      "Ideal para içamento e movimentação de cargas médias (até 5 toneladas) em áreas urbanas e locais com restrição de espaço. Inclui operador qualificado.",
     imageUrl:
       "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Guindauto Munck movimentando carga pesada em ambiente industrial",
-    whatsappText: "Olá! Gostaria de solicitar um orçamento para Movimentação de Cargas (Guindauto Munck).",
+    imageAlt: "Guindauto Munck 5T em operação de içamento",
+    routePath: "/guindauto-5t",
+    icon: <Truck size={24} />,
   },
   {
-    title: "Obras Civis",
+    title: "Locação de Guindauto 10T",
     description:
-      "Suporte completo para obras, içamento de materiais pesados e movimentação de equipamentos em canteiros de obras com nossos Caminhões Munck 5T e 10T.",
+      "Potência máxima para içamento de cargas pesadas (até 10 toneladas), estruturas robustas e equipamentos de grande porte em obras e indústrias.",
     imageUrl:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Caminhão Munck em canteiro de obras auxiliando na construção",
-    whatsappText: "Olá! Gostaria de solicitar um orçamento para Obras Civis (Guindauto Munck).",
+    imageAlt: "Caminhão Munck 10T em canteiro de obras",
+    routePath: "/guindauto-10t",
+    icon: <Truck size={24} />,
   },
   {
-    title: "Serviços Urbanos",
+    title: "Içamento e Movimentação de Cargas",
     description:
-      "Soluções eficientes para manutenção urbana, instalação de postes, placas de sinalização e poda de árvores utilizando Guindautos Munck.",
+      "Serviço completo de logística pesada, utilizando Caminhões Munck para posicionamento preciso de máquinas, containers e materiais em geral.",
     imageUrl:
       "https://images.unsplash.com/photo-1508873696983-2dfd5898fcc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Guindauto Munck realizando manutenção em infraestrutura urbana",
-    whatsappText: "Olá! Gostaria de solicitar um orçamento para Serviços Urbanos (Guindauto Munck).",
+    imageAlt: "Serviço de içamento em área urbana",
+    routePath: "/icamento-movimentacao",
+    icon: <Wrench size={24} />,
   },
 ];
 
 const ServicesSection: React.FC = () => {
-  const whatsappNumber = "5511961623798";
-
-  const handleWhatsappClick = (serviceTitle: string) => {
-    trackEvent('click', 'whatsapp_orcamento', `Serviço: ${serviceTitle}`);
+  const handleViewDetailsClick = (serviceTitle: string) => {
+    trackEvent('click', 'view_service_page', `Serviço: ${serviceTitle}`);
   };
 
   return (
     <section id="servicos" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Nossos Serviços de Içamento com Caminhão Munck"
-          subtitle="A versatilidade dos Guindautos 5 e 10 toneladas para diversas aplicações"
+          title="Nossos Principais Serviços com Caminhão Munck"
+          subtitle="Locação de Guindautos 5T e 10T e soluções completas de içamento na Grande SP"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
@@ -63,28 +74,26 @@ const ServicesSection: React.FC = () => {
                 aria-label={service.imageAlt}
               ></div>
               <CardContent className="p-6">
-                <CardTitle className="text-xl font-semibold text-primary mb-3">
-                  {service.title}
+                <CardTitle className="text-xl font-semibold text-primary mb-3 flex items-center gap-2">
+                  {service.icon} {service.title}
                 </CardTitle>
                 <p className="text-gray-600 mb-4">{service.description}</p>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(service.whatsappText)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to={service.routePath}
                   className="w-full"
-                  onClick={() => handleWhatsappClick(service.title)}
+                  onClick={() => handleViewDetailsClick(service.title)}
                 >
                   <Button
                     className={cn(
-                      "w-full bg-secondary hover:bg-secondary/90 text-primary font-bold",
+                      "w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold",
                       "flex items-center gap-2 transition-all duration-300",
                     )}
                   >
-                    <Truck size={18} /> Solicitar Orçamento
+                    Ver Detalhes do Serviço
                   </Button>
-                </a>
+                </Link>
               </CardFooter>
             </Card>
           ))}
