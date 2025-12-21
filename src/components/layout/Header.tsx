@@ -13,6 +13,7 @@ import {
 
 const navItems = [
   { name: "Home", href: "/", isAnchor: false }, // Link para a Home
+  { name: "Sobre Nós", href: "/sobre-nos", isAnchor: false }, // Novo link
   { name: "Guindautos Munck", href: "#guindauto", isAnchor: true },
   { name: "Contato", href: "#contato", isAnchor: true },
 ];
@@ -33,7 +34,10 @@ const Header: React.FC = () => {
   const logoUrl = "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/Logo%20SOCRAM%20(cor%20azul%20e%20amarelo)%20.png";
 
   const renderLink = (item: { name: string; href: string; isAnchor: boolean }) => {
-    const isActive = item.isAnchor && activeSection === item.href.substring(1);
+    // Verifica se o link é a rota atual (apenas para links não-âncora)
+    const isCurrentPage = !item.isAnchor && window.location.pathname === item.href;
+    const isActiveAnchor = item.isAnchor && activeSection === item.href.substring(1);
+    
     const baseClasses = "text-gray-700 font-medium hover:text-secondary transition-colors text-lg";
     const activeClasses = "text-primary border-b-2 border-primary";
 
@@ -41,7 +45,7 @@ const Header: React.FC = () => {
       return (
         <a
           href={item.href}
-          className={cn(baseClasses, isActive && activeClasses)}
+          className={cn(baseClasses, isActiveAnchor && activeClasses)}
         >
           {item.name}
         </a>
@@ -50,7 +54,7 @@ const Header: React.FC = () => {
       return (
         <Link
           to={item.href}
-          className={cn(baseClasses, isActive && activeClasses)}
+          className={cn(baseClasses, isCurrentPage && activeClasses)}
         >
           {item.name}
         </Link>
@@ -59,7 +63,9 @@ const Header: React.FC = () => {
   };
 
   const renderMobileLink = (item: { name: string; href: string; isAnchor: boolean }) => {
-    const isActive = item.isAnchor && activeSection === item.href.substring(1);
+    const isCurrentPage = !item.isAnchor && window.location.pathname === item.href;
+    const isActiveAnchor = item.isAnchor && activeSection === item.href.substring(1);
+    
     const baseClasses = "block text-lg text-gray-700 font-medium hover:text-primary transition-colors py-2 border-b border-gray-100";
     const activeClasses = "text-primary border-l-4 border-primary pl-2";
 
@@ -73,7 +79,7 @@ const Header: React.FC = () => {
         <a
           href={item.href}
           onClick={handleClick}
-          className={cn(baseClasses, isActive && activeClasses)}
+          className={cn(baseClasses, isActiveAnchor && activeClasses)}
         >
           {item.name}
         </a>
@@ -83,7 +89,7 @@ const Header: React.FC = () => {
         <Link
           to={item.href}
           onClick={handleClick}
-          className={cn(baseClasses, isActive && activeClasses)}
+          className={cn(baseClasses, isCurrentPage && activeClasses)}
         >
           {item.name}
         </Link>

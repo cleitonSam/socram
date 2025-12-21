@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Guindauto5T from "./pages/Guindauto5T";
 import Guindauto10T from "./pages/Guindauto10T";
 import IcamentoMovimentacao from "./pages/IcamentoMovimentacao";
+import AboutUs from "./pages/AboutUs";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/guindauto-5t" element={<Guindauto5T />} />
           <Route path="/guindauto-10t" element={<Guindauto10T />} />
           <Route path="/icamento-movimentacao" element={<IcamentoMovimentacao />} />
+          <Route path="/sobre-nos" element={<AboutUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
