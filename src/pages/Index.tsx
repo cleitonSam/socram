@@ -6,6 +6,7 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import SpecsSection from "@/components/sections/SpecsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import WhatsappFloat from "@/components/WhatsappFloat";
+import ServiceBadge from "@/components/ServiceBadge"; // Importa o novo componente
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsappFloat />
+      <ServiceBadge /> {/* Adiciona o selo aqui */}
     </div>
   );
 };
