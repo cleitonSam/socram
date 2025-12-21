@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,7 @@ interface ServiceDetailLayoutProps {
   sections: SectionContent[];
   whatsappText: string;
   eventLabel: string;
+  metaDescription: string; // Novo: para SEO
 }
 
 const whatsappNumber = "5511961623798";
@@ -29,12 +30,32 @@ const ServiceDetailLayout: React.FC<ServiceDetailLayoutProps> = ({
   sections,
   whatsappText,
   eventLabel,
+  metaDescription,
 }) => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
 
   const handleWhatsappClick = () => {
     trackEvent('click', 'whatsapp_page_cta', eventLabel);
   };
+
+  // SEO: Define o título da página e a meta description
+  useEffect(() => {
+    document.title = `${pageTitle} | SOCRAM`;
+    
+    let metaDescriptionTag = document.querySelector('meta[name="description"]');
+    if (!metaDescriptionTag) {
+      metaDescriptionTag = document.createElement('meta');
+      metaDescriptionTag.setAttribute('name', 'description');
+      document.head.appendChild(metaDescriptionTag);
+    }
+    metaDescriptionTag.setAttribute('content', metaDescription);
+
+    // Opcional: Limpar o título ao desmontar (embora a navegação geralmente substitua)
+    return () => {
+        document.title = "SOCRAM | Locação de Guindauto 5T e 10T (Caminhão Munck) em SP - Içamento de Cargas"; 
+    };
+  }, [pageTitle, metaDescription]);
+
 
   return (
     <div className="min-h-screen flex flex-col">

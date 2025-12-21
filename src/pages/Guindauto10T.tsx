@@ -1,5 +1,6 @@
 import React from "react";
 import ServiceDetailLayout from "@/components/layout/ServiceDetailLayout";
+import { Link } from "react-router-dom";
 
 const Guindauto10T: React.FC = () => {
   const pageData = {
@@ -7,6 +8,7 @@ const Guindauto10T: React.FC = () => {
     pageSubtitle: "Potência e estabilidade para movimentação de cargas pesadas. Ideal para operações industriais e obras de grande porte.",
     whatsappText: "Olá! Gostaria de solicitar um orçamento para a locação do Guindauto 10 Toneladas.",
     eventLabel: "Guindauto 10T Page CTA",
+    metaDescription: "Locação de Guindauto 10 toneladas (Caminhão Munck) em SP. Solução robusta para içamento de cargas pesadas, transformadores, containers grandes e estruturas metálicas. Atendimento em São Paulo e Grande SP.",
     sections: [
       {
         title: "Para que Serve",
@@ -42,6 +44,14 @@ const Guindauto10T: React.FC = () => {
       {
         title: "Regiões Atendidas",
         content: "Atendemos São Paulo (Capital) e toda a Região Metropolitana (RMSP), garantindo que seu projeto, por maior que seja, tenha o suporte logístico necessário.",
+      },
+      {
+        title: "Serviços Relacionados",
+        content: (
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Para cargas menores ou locais com restrição de espaço, oferecemos a <Link to="/guindauto-5t" className="text-secondary hover:underline font-semibold">Locação de Guindauto 5 Toneladas</Link>. Todos os nossos serviços incluem <Link to="/icamento-movimentacao" className="text-secondary hover:underline font-semibold">Içamento e Movimentação de Cargas</Link> com segurança.
+          </p>
+        ),
       },
     ],
   };

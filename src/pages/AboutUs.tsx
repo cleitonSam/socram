@@ -7,6 +7,7 @@ const AboutUs: React.FC = () => {
     pageSubtitle: "Eficiência, Confiança e Qualidade em Içamento de Cargas.",
     whatsappText: "Olá! Gostaria de falar com a SOCRAM sobre a empresa.",
     eventLabel: "About Us Page CTA",
+    metaDescription: "Conheça a SOCRAM: empresa familiar especializada em locação de caminhão munck (guindauto 5T e 10T) em São Paulo. Foco em agilidade, segurança e operadores qualificados.",
     sections: [
       {
         title: "Nossa História e Missão",
