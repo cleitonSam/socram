@@ -18,7 +18,7 @@ const SecuritySealFloat: React.FC = () => {
       <img
         src={sealUrl}
         alt="Selo de Segurança e Qualidade SOCRAM"
-        className="w-full h-full object-contain"
+        className="w-full h-full object-contain rounded-full" // Adicionado rounded-full aqui para a imagem
       />
     </div>
   );
