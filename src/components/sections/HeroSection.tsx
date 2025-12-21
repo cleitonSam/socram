@@ -26,16 +26,16 @@ const HeroSection: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         {/* Selos de Atendimento e Segurança */}
-        <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
+        <div className="relative h-40 sm:h-48 w-full flex justify-center items-center mb-2">
           <img
             src={sealImageUrl}
             alt="Selo de Atendimento em até 1 hora"
-            className="w-36 sm:w-44 lg:w-52 h-auto animate-pulse" 
+            className="absolute w-36 sm:w-44 h-auto transform -translate-x-16 sm:-translate-x-20 -rotate-[15deg] animate-pulse"
           />
           <img
             src={securitySealImageUrl}
             alt="Selo de Segurança"
-            className="w-36 sm:w-44 lg:w-52 h-auto animate-pulse" 
+            className="absolute w-36 sm:w-44 h-auto transform translate-x-16 sm:translate-x-20 rotate-[15deg] animate-pulse"
           />
         </div>
 
