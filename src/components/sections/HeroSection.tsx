@@ -16,6 +16,8 @@ const GraphicItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
 );
 
 const HeroSection: React.FC = () => {
+  const sealUrl = "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/selo%20atendimento%20.png";
+
   return (
     <section
       id="home"
@@ -25,10 +27,17 @@ const HeroSection: React.FC = () => {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight max-w-4xl">
           Soluções Completas em Içamento e Movimentação de Cargas
         </h1>
-        <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-10 font-light opacity-90">
+        <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-8 font-light opacity-90">
           Locação de Guindauto 5T e 10T com operador incluso em São Paulo e Grande SP. A solução ágil e segura para sua obra ou projeto.
         </p>
         
+        {/* Selo de Atendimento */}
+        <img 
+          src={sealUrl} 
+          alt="Selo de Atendimento em até 1 hora" 
+          className="w-36 h-auto mb-10 sm:w-44 lg:w-52 mx-auto shadow-2xl transition-transform duration-300 hover:scale-105"
+        />
+
         <a href="#contato">
           <Button
             size="lg"
