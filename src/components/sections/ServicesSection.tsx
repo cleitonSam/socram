@@ -22,7 +22,7 @@ const servicesData: ServiceCardData[] = [
     description:
       "Ideal para içamento e movimentação de cargas médias (até 5 toneladas) em áreas urbanas e locais com restrição de espaço. Inclui operador qualificado.",
     imageUrl:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/93f624f1-e2c1-43bd-a282-05e25787e799.JPG", // Nova imagem
     imageAlt: "Guindauto Munck 5T em operação de içamento",
     routePath: "/guindauto-5t",
     icon: <Truck size={24} />,
@@ -38,7 +38,7 @@ const servicesData: ServiceCardData[] = [
     icon: <Truck size={24} />,
   },
   {
-    title: "Içamento e Movimentação de Cargas",
+    title: "Movimentação de Cargas", // Título atualizado
     description:
       "Serviço completo de logística pesada, utilizando Caminhões Munck para posicionamento preciso de máquinas, containers e materiais em geral.",
     imageUrl:
