@@ -29,7 +29,7 @@ interface CraneSpec {
 
 const craneSpecs: Record<string, CraneSpec> = {
   '5t': {
-    title: "Guindauto 5T",
+    title: "Guindauto 5T (Caminhão Munck)",
     capacity: "5 toneladas",
     specs: [
       { characteristic: "Capacidade Máxima", detail: "5 toneladas" },
@@ -41,11 +41,11 @@ const craneSpecs: Record<string, CraneSpec> = {
         detail: "Incluso (qualificado e experiente)",
       },
     ],
-    whatsappText: "Olá! Gostaria de solicitar a locação do Guindauto 5T.",
+    whatsappText: "Olá! Gostaria de solicitar a locação do Guindauto 5T (Caminhão Munck).",
     eventLabel: 'Botão de Locação - Especificações 5T',
   },
   '10t': {
-    title: "Guindauto 10T",
+    title: "Guindauto 10T (Caminhão Munck)",
     capacity: "10 toneladas",
     specs: [
       { characteristic: "Capacidade Máxima", detail: "10 toneladas" },
@@ -57,7 +57,7 @@ const craneSpecs: Record<string, CraneSpec> = {
         detail: "Incluso (qualificado e experiente)",
       },
     ],
-    whatsappText: "Olá! Gostaria de solicitar a locação do Guindauto 10T.",
+    whatsappText: "Olá! Gostaria de solicitar a locação do Guindauto 10T (Caminhão Munck).",
     eventLabel: 'Botão de Locação - Especificações 10T',
   }
 };
@@ -79,8 +79,8 @@ const SpecsSection: React.FC = () => {
     <section id="guindauto" className="py-16 md:py-24 bg-blue-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Especificações dos Guindautos"
-          subtitle="Potência, precisão e confiabilidade para suas operações"
+          title="Especificações Técnicas: Guindauto 5T e 10T (Caminhão Munck)"
+          subtitle="Potência, precisão e confiabilidade para suas operações de içamento"
         />
 
         <Tabs defaultValue="5t" className="max-w-4xl mx-auto">
@@ -156,7 +156,7 @@ const SpecsSection: React.FC = () => {
                 "flex items-center gap-2 mx-auto",
               )}
             >
-              <Truck size={20} /> Solicitar Locação do {currentSpec.capacity}
+              <Truck size={20} /> Solicitar Locação do Guindauto de {currentSpec.capacity}
             </Button>
           </a>
         </div>

@@ -9,14 +9,14 @@ const Footer: React.FC = () => {
       items: [
         { name: "Home", href: "#home" },
         { name: "Serviços", href: "#servicos" },
-        { name: "Guindauto 5T", href: "#guindauto" },
+        { name: "Guindautos Munck", href: "#guindauto" },
         { name: "Contato", href: "#contato" },
       ],
     },
     {
       title: "Serviços",
       items: [
-        { name: "Locação 5 Toneladas", href: "#servicos" },
+        { name: "Locação 5T e 10T", href: "#servicos" },
         { name: "Serviços para Obras", href: "#servicos" },
         { name: "Instalações Industriais", href: "#servicos" },
         { name: "Locação Mensal", href: "#servicos" },
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
               SOCRAM
             </h3>
             <p className="text-gray-300">
-              Especialistas em içamento e movimentação de cargas médias em São
+              Especialistas em içamento e movimentação de cargas médias e pesadas em São
               Paulo e Grande São Paulo.
             </p>
           </div>

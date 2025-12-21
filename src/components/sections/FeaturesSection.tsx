@@ -9,7 +9,7 @@ const featuresData = [
     icon: <Cog size={32} />,
     title: "Especialização",
     description:
-      "Foco exclusivo em guindauto de 5 toneladas, garantindo expertise e desempenho superior.",
+      "Foco em guindautos de 5 e 10 toneladas (Caminhão Munck), garantindo expertise e desempenho superior.",
   },
   {
     icon: <HardHat size={32} />,

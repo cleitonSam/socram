@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
           Soluções Completas em Içamento e Movimentação de Cargas
         </h1>
         <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-10 font-light opacity-90">
-          Locação de Guindauto 5T com operador incluso em São Paulo e Grande SP. A solução ágil e segura para sua obra ou projeto.
+          Locação de Guindauto 5T e 10T com operador incluso em São Paulo e Grande SP. A solução ágil e segura para sua obra ou projeto.
         </p>
         
         <a href="#contato">
@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
         </a>
 
         <div className="flex justify-center flex-wrap gap-4 sm:gap-8 mt-20">
-          <GraphicItem icon={<Truck />} text="Guindauto 5T" />
+          <GraphicItem icon={<Truck />} text="Guindauto Munck" />
           <GraphicItem icon={<Zap />} text="Rápido" />
           <GraphicItem icon={<Shield />} text="Seguro" />
           <GraphicItem icon={<MapPin />} text="Grande SP" />

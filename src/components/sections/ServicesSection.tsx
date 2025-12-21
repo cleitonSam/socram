@@ -10,29 +10,29 @@ const servicesData = [
   {
     title: "Movimentação de Cargas",
     description:
-      "Içamento e posicionamento preciso de cargas de até 5 toneladas em diversos ambientes, com segurança e eficiência.",
+      "Içamento e posicionamento preciso de cargas de até 10 toneladas em diversos ambientes, utilizando Guindautos Munck 5T e 10T, com segurança e eficiência.",
     imageUrl:
       "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Guindauto movimentando carga pesada em ambiente industrial",
-    whatsappText: "Olá! Gostaria de solicitar um orçamento para Movimentação de Cargas.",
+    imageAlt: "Guindauto Munck movimentando carga pesada em ambiente industrial",
+    whatsappText: "Olá! Gostaria de solicitar um orçamento para Movimentação de Cargas (Guindauto Munck).",
   },
   {
     title: "Obras Civis",
     description:
-      "Suporte completo para obras, içamento de materiais pesados e movimentação de equipamentos em canteiros de obras.",
+      "Suporte completo para obras, içamento de materiais pesados e movimentação de equipamentos em canteiros de obras com nossos Caminhões Munck 5T e 10T.",
     imageUrl:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Guindauto em canteiro de obras auxiliando na construção",
-    whatsappText: "Olá! Gostaria de solicitar um orçamento para Obras Civis.",
+    imageAlt: "Caminhão Munck em canteiro de obras auxiliando na construção",
+    whatsappText: "Olá! Gostaria de solicitar um orçamento para Obras Civis (Guindauto Munck).",
   },
   {
     title: "Serviços Urbanos",
     description:
-      "Soluções eficientes para manutenção urbana, instalação de postes, placas de sinalização e poda de árvores.",
+      "Soluções eficientes para manutenção urbana, instalação de postes, placas de sinalização e poda de árvores utilizando Guindautos Munck.",
     imageUrl:
       "https://images.unsplash.com/photo-1508873696983-2dfd5898fcc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Guindauto realizando manutenção em infraestrutura urbana",
-    whatsappText: "Olá! Gostaria de solicitar um orçamento para Serviços Urbanos.",
+    imageAlt: "Guindauto Munck realizando manutenção em infraestrutura urbana",
+    whatsappText: "Olá! Gostaria de solicitar um orçamento para Serviços Urbanos (Guindauto Munck).",
   },
 ];
 
@@ -47,8 +47,8 @@ const ServicesSection: React.FC = () => {
     <section id="servicos" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Nossos Serviços de Içamento"
-          subtitle="A versatilidade do guindauto 5 toneladas para diversas aplicações"
+          title="Nossos Serviços de Içamento com Caminhão Munck"
+          subtitle="A versatilidade dos Guindautos 5 e 10 toneladas para diversas aplicações"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (

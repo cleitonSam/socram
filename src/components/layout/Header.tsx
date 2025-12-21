@@ -7,7 +7,7 @@ import { useActiveSection } from "@/hooks/useActiveSection";
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "Serviços", href: "#servicos" },
-  { name: "Guindauto 5T", href: "#guindauto" },
+  { name: "Guindautos Munck", href: "#guindauto" },
   { name: "Contato", href: "#contato" },
 ];
 
