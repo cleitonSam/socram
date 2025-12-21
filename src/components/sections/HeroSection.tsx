@@ -17,7 +17,6 @@ const GraphicItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
 
 const HeroSection: React.FC = () => {
   const sealImageUrl = "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/selo%20atendimento%20.png";
-  const securitySealImageUrl = "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/selo%20de%20seguranca%CC%80.png";
 
   return (
     <section
@@ -25,19 +24,12 @@ const HeroSection: React.FC = () => {
       className="flex items-center justify-center text-center text-white min-h-[70vh] bg-primary pt-24 pb-12"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        {/* Selos de Atendimento e Segurança */}
-        <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
-          <img
-            src={sealImageUrl}
-            alt="Selo de Atendimento em até 1 hora"
-            className="w-36 sm:w-44 lg:w-52 h-auto animate-pulse" 
-          />
-          <img
-            src={securitySealImageUrl}
-            alt="Selo de Segurança"
-            className="w-36 sm:w-44 lg:w-52 h-auto animate-pulse" 
-          />
-        </div>
+        {/* Selo de Atendimento */}
+        <img
+          src={sealImageUrl}
+          alt="Selo de Atendimento em até 1 hora"
+          className="w-40 sm:w-48 lg:w-56 h-auto mb-8 animate-pulse" // Adicionado animate-pulse para mais destaque
+        />
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight max-w-4xl">
           Soluções Completas em Içamento e Movimentação de Cargas
