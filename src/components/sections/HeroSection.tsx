@@ -25,17 +25,17 @@ const HeroSection: React.FC = () => {
       className="flex items-center justify-center text-center text-white min-h-[70vh] bg-primary pt-24 pb-12"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        {/* Selos de Atendimento e Segurança - Empilhados */}
-        <div className="flex flex-col items-center gap-4 mb-12"> {/* Usando flex-col para empilhar */}
+        {/* Selos de Atendimento e Segurança */}
+        <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
           <img
             src={sealImageUrl}
             alt="Selo de Atendimento em até 1 hora"
-            className="w-40 sm:w-48 lg:w-56 h-auto animate-pulse" 
+            className="w-36 sm:w-44 lg:w-52 h-auto animate-pulse" 
           />
           <img
             src={securitySealImageUrl}
             alt="Selo de Segurança"
-            className="w-40 sm:w-48 lg:w-56 h-auto animate-pulse" 
+            className="w-36 sm:w-44 lg:w-52 h-auto animate-pulse" 
           />
         </div>
 
