@@ -42,7 +42,7 @@ const servicesData: ServiceCardData[] = [
     description:
       "Serviço completo de logística pesada, utilizando Caminhões Munck para posicionamento preciso de máquinas, containers e materiais em geral.",
     imageUrl:
-      "https://images.unsplash.com/photo-1508873696983-2dfd5898fcc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://raw.githubusercontent.com/cleitonSam/img-socram/refs/heads/main/WhatsApp%20Image%202025-10-29%20at%2011.06.14.jpeg", // Imagem atualizada
     imageAlt: "Serviço de içamento em área urbana",
     routePath: "/icamento-movimentacao",
     icon: <Wrench size={24} />,
