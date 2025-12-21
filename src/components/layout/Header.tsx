@@ -176,7 +176,7 @@ const Header: React.FC = () => {
                         key={item.name}
                         to={item.href}
                         onClick={() => setIsMenuOpen(false)}
-                        className="flex items-center gap-3 text-lg text-gray-700 hover:text-primary transition-colors py-2 pl-4 border-b border-gray-100"
+                        className="flex items-center gap-3 text-lg text-primary hover:text-secondary transition-colors py-2 pl-4 border-b border-gray-100" // Alterado text-gray-700 para text-primary
                     >
                         {item.icon} {item.name}
                     </Link>

@@ -7,9 +7,9 @@ const GraphicItem: React.FC<{ icon: React.ReactNode; text: string }> = ({
   icon,
   text,
 }) => (
-  <div className="flex flex-col items-center p-4 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 min-w-[120px] sm:min-w-[150px] transition-transform hover:scale-[1.02]">
-    <div className="text-3xl text-secondary mb-2">{icon}</div>
-    <div className="font-semibold text-white text-sm sm:text-base text-center">
+  <div className="flex flex-col items-center p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 w-full max-w-[150px] sm:w-auto transition-transform hover:scale-[1.02]">
+    <div className="text-2xl sm:text-3xl text-secondary mb-2">{icon}</div>
+    <div className="font-semibold text-white text-xs sm:text-base text-center">
       {text}
     </div>
   </div>
@@ -28,13 +28,13 @@ const HeroSection: React.FC = () => {
         <img
           src={sealImageUrl}
           alt="Selo de Atendimento em até 1 hora"
-          className="w-40 sm:w-48 lg:w-56 h-auto mb-8 animate-pulse" // Adicionado animate-pulse para mais destaque
+          className="w-32 sm:w-40 lg:w-48 h-auto mb-8 animate-pulse" // Ajustado para ser menor no mobile
         />
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight max-w-4xl">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight max-w-4xl">
           Soluções Completas em Içamento e Movimentação de Cargas
         </h1>
-        <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-10 font-light opacity-90">
+        <p className="text-base sm:text-xl max-w-3xl mx-auto mb-10 font-light opacity-90">
           Locação de Guindauto 5T e 10T com operador incluso em São Paulo e Grande SP. A solução ágil e segura para sua obra ou projeto.
         </p>
         
@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
           <Button
             size="lg"
             className={cn(
-              "bg-secondary hover:bg-secondary/90 text-primary font-bold py-7 px-10 text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg",
+              "bg-secondary hover:bg-secondary/90 text-primary font-bold py-4 px-6 text-base sm:py-7 sm:px-10 sm:text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg", // Ajustado para mobile
               "flex items-center gap-3"
             )}
           >
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
           </Button>
         </a>
 
-        <div className="flex justify-center flex-wrap gap-4 sm:gap-8 mt-20">
+        <div className="flex justify-center flex-wrap gap-4 sm:gap-8 mt-16"> {/* Reduzido mt-20 para mt-16 */}
           <GraphicItem icon={<Truck />} text="Guindauto Munck" />
           <GraphicItem icon={<Zap />} text="Rápido" />
           <GraphicItem icon={<Shield />} text="Seguro" />
